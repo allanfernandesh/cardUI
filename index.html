@@ -1,0 +1,56 @@
+<html lang="pt-BrR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+
+    <title>CardUI</title>
+</head>
+<body>
+    <div class="card">
+        <div class="circle" id="circle"></div>
+        <img src="/assets/sneakers_green.png" alt="sneakers" id="sneaker">
+        <h2>Nike Running</h2>
+    
+        <div class="content">
+            <div class="customize">
+                <section class="sizes">
+                    <h3>Tamanhos</h3>
+                    <ul id="sizes_list">
+                        <li>39</li>
+                        <li>40</li>
+                        <li>41</li>
+                        <li>42</li>
+                        <li>43</li>
+                    </ul>
+                </section>
+                <section class="colors">
+                    <h3>Cores</h3>
+                    <ul id="colors_list">
+                        <li data-color="#9bdc28" data-sneaker="green" class="active_color"></li>
+                        <li data-color="#ff0000" data-sneaker="red"></li>
+                        <li data-color="#0000ff" data-sneaker="blue"></li>
+                    </ul>
+                </section>
+            </div>
+            <div class="purchase" >
+                <button class="bag" id="bag" onclick="debounce(PutBag(), 1000)">
+                    <i data-feather="chevrons-down" class="arrows"></i>
+                    <i data-feather="chevrons-down" class="arrows"></i>
+                    <i data-feather="shopping-cart"></i>
+                </button>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src ="https://unpkg.com/feather-icons"> </script>
+    <script src="script.js"></script>
+    <script>
+        feather.replace()
+      </script>
+</body>
+
+</html>

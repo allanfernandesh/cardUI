@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #131313;
+    font-family: 'Poppins', sans-serif;
+}
+.card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 15px 5px inset rgba(255, 255, 255, 0.05);
+    height: 450px;
+    width: 320px;
+    border-radius: 25px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.card .circle {
+    position: absolute;
+    top: -30%;
+    left: -60px;
+    background: #9bdc28;
+    border-radius: 225px;
+    transition: 1s ease;
+    width: 450px;
+    height: 450px;
+}
+
+.card:hover .circle {
+    top: -40%;
+}
+
+.card img {
+    position: absolute;
+    top: -30px;
+    left: -40px;
+    margin: 0;
+    width: 420px;
+    transform: rotate(-22deg);
+    transition: 1s;
+}
+
+.card:hover img {
+    transform: rotate(0deg);
+    top: -125px;
+    left: -40px;
+}
+
+@keyframes put {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(270px, 450px);
+        width: 50px;
+    }
+}
+
+.card h2 {
+    position: absolute;
+    color: #fff;
+    top: 10%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    transition: 1.5s;
+    font-style: italic;
+}
+
+.card:hover h2 {
+    top: 45%;
+}
+.card .content {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    color: #fff;
+    opacity: 0;
+    transition: 1s ease;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.card:hover .content {
+    bottom: 10%;
+    opacity: 1;
+}
+
+.card .content .customize .sizes ul,
+.card .content .customize .colors ul {
+    list-style: none;
+}
+
+.card .content .customize .sizes ul li,
+.card .content .customize .colors ul li {
+    display: inline-block;
+    border-radius: 50%;
+    padding: 8px;
+    font-weight: bold;
+}
+
+.card .content .customize .sizes ul li:hover {
+    background: #9bdc28;
+}
+
+.card .content .customize .sizes ul li.active_size {
+    background: #9bdc28;
+}
+
+.card .content .customize .colors ul {
+    margin-top: 8px;
+}
+.card .content .customize .colors li {
+    margin-left: 8px;
+}
+.card .content .customize .colors li:hover {
+    transform: scale(1.2);
+}
+.card .content .customize .colors li.active_color {
+    transform: scale(1.2);
+}
+
+.card .content .customize .colors li:nth-child(1) {
+    background: #9bdc28;
+}
+.card .content .customize .colors li:nth-child(2) {
+    background: red;
+}
+.card .content .customize .colors li:nth-child(3) {
+    background: blue;
+}
+.card .content .customize .colors li:nth-child(4) {
+    background: yellow;
+}
+.card .content .customize .colors li:nth-child(5) {
+    background: black;
+}
+
+.card .content .purchase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.card .content .purchase .bag {
+    background: #9bdc28;
+    color: #fff;
+    outline: none;
+    border: 0;
+    height: 100px;
+    width: 70px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.card .content .purchase .bag {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.card .content .purchase .bag .arrows {
+    transform: translateY(-10px);
+}
+
+.card:hover .content .purchase .bag .arrows {
+    animation: arrowsAnime 0.5s ease 0s 3 both;
+}
+.card .content .purchase .bag:hover {
+    transform: scale(1.1);
+}
+@keyframes arrowsAnime {
+    0% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
